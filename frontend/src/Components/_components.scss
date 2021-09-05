@@ -1,0 +1,92 @@
+@import "../variables";
+
+
+/////////////////////////////////////////////////////
+////// BUTTON
+.btn {
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right bottom, $color-primary-light 10%, $color-primary-dark);
+    box-shadow: 0 1rem 2rem rgba(#000, .3);
+    color: #fff;
+    align-self: center;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 3px;
+    margin-top: 2rem;
+    transition: all .2s;
+    backface-visibility: hidden;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.1);
+        box-shadow: 0 1rem 2rem rgba(#000, .2);
+    }
+
+    &:active {
+        transform: translateY(-0.5rem) scale(1.05);
+    }
+
+    &--text {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $color-blue-light;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 200;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            color: $color-blue-light;
+            border-bottom: 1px solid $color-blue-light;
+        }
+    }
+}
+
+
+///////////////////////////////////////////////////////////
+///////////// FORM
+.form {
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    align-self: stretch;
+    font-weight: 300;
+
+    &__label {
+        font-family: inherit;
+        background-color: none;
+        font-size: 1.6rem;
+        color: $color-light-grey-2;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        &[type="text"], &[type="password"] {
+            
+            margin-bottom: 2rem;
+            padding: .75rem 0rem;
+            border: none;
+            border-bottom: 1px solid $color-light-grey-1;
+            outline: none;
+            
+        }
+   
+    }
+}
+
+/////////////////////////////////////////////
+//////////// ERROR TEXT
+.error {
+    color: #FF0000;
+    font-size: 2rem;
+    font-weight: 400;
+    align-self: center;
+    margin-top: 1.5rem;
+}
